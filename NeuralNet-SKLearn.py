@@ -1,9 +1,9 @@
-import cv2 as cv
-import numpy as np
-import matplotlib.pyplot as plt
-import tensorflow as tf
-import keras.datasets.mnist as mnist
 import random
+import cv2 as cv
+import keras.datasets.mnist as mnist
+import matplotlib.pyplot as plt
+import numpy as np
+import tensorflow as tf
 from sklearn.datasets import load_digits
 
 digits = load_digits()

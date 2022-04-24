@@ -1,9 +1,9 @@
-import matplotlib.pyplot as plt
-from sklearn.datasets import load_digits
 import random
-from sklearn import ensemble
-import numpy as np
 import cv2 as cv
+import matplotlib.pyplot as plt
+import numpy as np
+from sklearn import ensemble
+from sklearn.datasets import load_digits
 
 digits = load_digits()
 
@@ -34,14 +34,6 @@ classifier.fit(train_images, train_target)
 score = classifier.score(test_images, test_target)
 print('Random Tree Classifier:\n')
 print('Score\t' + str(score))
-
-# for qqq in range(0, 1):
-#     img = digits.images[qqq]
-#     prediction = classifier.predict(img.reshape(1, -1))
-#     print(f'The result is probably: {np.max(prediction)}')
-#     print(f'The Image Was: {digits.target[qqq]}')
-#     plt.imshow(img, cmap=plt.get_cmap('gray'))
-#     plt.show()
 
 for qqq in range(0, 10):
     img = cv.imread(f'8by8/{qqq}.png')[:, :, 0]

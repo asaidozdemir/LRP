@@ -1,10 +1,10 @@
-import matplotlib.pyplot as plt
-from sklearn.datasets import load_digits
 import random
-from sklearn import ensemble
-import numpy as np
 import cv2 as cv
 import keras.datasets.mnist as mnist
+import matplotlib.pyplot as plt
+import numpy as np
+from sklearn import ensemble
+from sklearn.datasets import load_digits
 
 digits = load_digits()
 
