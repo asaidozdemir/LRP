@@ -1,10 +1,10 @@
-from sklearn import datasets, neighbors
-from sklearn.model_selection import train_test_split
-from keras.datasets import mnist
+import time
+import cv2 as cv
 import matplotlib.pyplot as plt
 import numpy as np
-import cv2 as cv
-import time
+from keras.datasets import mnist
+from sklearn import datasets, neighbors
+from sklearn.model_selection import train_test_split
 
 # load Digits data set divided into data X and labels y
 X, y = datasets.load_digits(return_X_y=True)
@@ -60,8 +60,6 @@ del y_test_new
 del X
 del y
 del i
-
-
 ####################################################################
 
 

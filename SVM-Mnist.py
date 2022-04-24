@@ -1,11 +1,11 @@
+import cv2 as cv
 import matplotlib.pyplot as plt
-from sklearn.datasets import load_digits
+import numpy as np
+from keras.datasets import mnist
 from sklearn import svm
+from sklearn.datasets import load_digits
 from sklearn.metrics import classification_report
 from sklearn.model_selection import train_test_split
-from keras.datasets import mnist
-import numpy as np
-import cv2 as cv
 
 digits = load_digits()
 n_samples = len(digits.images)
