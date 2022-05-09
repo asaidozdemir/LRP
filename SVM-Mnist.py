@@ -6,6 +6,7 @@ from sklearn import svm
 from sklearn.datasets import load_digits
 from sklearn.metrics import classification_report
 from sklearn.model_selection import train_test_split
+from sklearn.multiclass import OneVsRestClassifier
 
 digits = load_digits()
 n_samples = len(digits.images)
@@ -71,7 +72,7 @@ del digits
 del n_samples
 ####################################################################
 
-model_linear = svm.SVC(kernel='linear', degree=3, gamma='scale')
+model_linear = OneVsRestClassifier(svm.SVC(kernel='linear', degree=3, gamma='scale', verbose=True),n_jobs=-1)
 model_linear.fit(X_train, y_train)
 
 # #y_pred_linear = model_linear.predict(X_test)
